@@ -7,123 +7,114 @@ import PlacesAutocomplete, {
   geocodeByPlaceId,
   getLatLng,
 } from 'react-places-autocomplete';
+import { connect } from 'react-redux'
 
+function App(props) {
 
-function App() {
-
-
-  // const [data, setData] = useState({elections:[]})
-
-  // useEffect(() => {
-  //   fetchData()
-  // }, [])
-
-
-  // const fetchData = () => {
-  //   fetch("https://www.googleapis.com/civicinfo/v2/elections?key=AIzaSyDatTrCAc_AsUpv-RrJ1uT-a9kvyF6SJS8")
-  //   // fetch('https://www.googleapis.com/civicinfo/v2/voterinfo?key=AIzaSyDatTrCAc_AsUpv-RrJ1uT-a9kvyF6SJS8&address=320%20Atlanta%20Ave.SE%20Atlanta%20GA%2030315&electionId=7001')
-  //     .then(response => response.json())
-  //     .then(result => {
-  //       setData(result)
-  //     })
-  // }
-
-  // const dataItems = data.elections.map(dataItem => {
-
-  //   return (
-
-  //     <div>
-  //       <li>{dataItem.name}</li>
-  //     </div>
-  //   )
+  // const [coordinates, setCoordinates] = React.useState({
+  //   lat: null,
+  //   lng: null
   // })
 
+  // const [reps, setReps] = useState({})
+
+
+
   const [address, setAddress] = React.useState("")
-  const [coordinates, setCoordinates] = React.useState({
-    lat: null,
-    lng: null
+
+  let formattedAddress = address.split(" ").join("%20")
+
+  useEffect(() => {
+    // getRepInfoByAddress()
+  }, [])
+
+  // const handleSelect = async value => {
+  //   const results = await geocodeByAddress(value)
+  //   const latLng = await getLatLng(results[0])
+  //   setAddress(value)
+  //   // setCoordinates(latLng)
+  //   // getElectionDataByAddress(value)
+  //   // getVoterInfoByAddress(value)
+  //   getRepInfoByAddress(value)
+  //     // .then(displayInfo())
+  // }
+
+
+  const getRepInfoByAddress = () => {
+    // let formattedAddress = value.split(" ").join("%20")
+    fetch(`https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyDatTrCAc_AsUpv-RrJ1uT-a9kvyF6SJS8&address=${formattedAddress}`)
+      .then(response => response.json())
+      .then(result => {
+        console.log(result)
+        props.onFetchReps(result)
+      })
+  }
+
+  // function displayInfo() {
+    
+
+  // }
+
+  const dataItems = props.reps.officials.map(rep => {
+    return (
+      <div key={rep.normalizedInput}>{rep.officials}</div>
+    )
   })
 
 
-
-  const handleSelect = async value => {
-    const results = await geocodeByAddress(value)
-    const latLng = await getLatLng(results[0])
-    setAddress(value) 
-    setCoordinates(latLng)
-    getElectionDataByAddress(value)
-    getVoterInfoByAddress(value)
-    getRepInfoByAddress(value)
-  }
-
-  async function getVoterInfoByAddress(value) {
-    let formattedAddress = value.split(" ").join("%20")
-    let url = `https://www.googleapis.com/civicinfo/v2/voterinfo?key=AIzaSyDatTrCAc_AsUpv-RrJ1uT-a9kvyF6SJS8&address=${formattedAddress}`
-    let response = await fetch(url)
-    let data = await response.json()
-
-    console.log(data)
-  }
-
-  async function getRepInfoByAddress(value) {
-    let formattedAddress = value.split(" ").join("%20")
-    let url = `https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyDatTrCAc_AsUpv-RrJ1uT-a9kvyF6SJS8&address=${formattedAddress}`
-    let response = await fetch(url)
-    let data = await response.json()
-
-    console.log(data)
-  }
-
-
-
-  async function getElectionDataByAddress (value) {
-    let formattedAddress = value.split(" ").join("%20")
-
-    let url = `https://www.googleapis.com/civicinfo/v2/elections?key=AIzaSyDatTrCAc_AsUpv-RrJ1uT-a9kvyF6SJS8&address=${formattedAddress}`
-
-    let response = await fetch(url)
-    let data = await response.json()
-
-    console.log(data)
-  }
-
   return (
 
-    // <div>
-    //   <h1>App</h1>
-    //   {dataItems}
-    // </div>
+
     <div>
       <PlacesAutocomplete
         value={address}
         onChange={setAddress}
-        onSelect={handleSelect}
+        onSelect={getRepInfoByAddress}
       >
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-        <div>
-          <input {...getInputProps({ placeholder: "Enter address here" })} />
-          
           <div>
-            {loading ? <div>...loading</div> : null}
+            <input {...getInputProps({ placeholder: "Enter address here" })} />
 
-            {suggestions.map((suggestion) => {
-              const style = {
-                backgroundColor: suggestion.active ? "#65C6F7" : "#fff",
-                color: suggestion.active ? "#fff" : "#000000"
+            <div>
+              {loading ? <div>...loading</div> : null}
 
-              }
+              {suggestions.map((suggestion) => {
+                const style = {
+                  backgroundColor: suggestion.active ? "#65C6F7" : "#fff",
+                  color: suggestion.active ? "#fff" : "#000000"
 
-              return ( 
-                <div {...getSuggestionItemProps(suggestion, {style})}>
-                  {suggestion.description}</div>
-              )
-            })}
+                }
+
+                return (
+                  <div
+                    {...getSuggestionItemProps(suggestion, { style })}>
+                    {suggestion.description}
+                  </div>
+                )
+              })}
+            </div>
           </div>
-        </div>
-      )}
+        )}
       </PlacesAutocomplete>
+
+      <ul>{dataItems}</ul>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    reps: state.reps
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onFetchReps: (reps) => dispatch({
+      type: 'FETCH_REPS',
+      payload: reps
+    })
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
