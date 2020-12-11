@@ -3,7 +3,7 @@
 function About () {
 
     return (
-        <div>This is the about us page</div>
+        <div>This is the about page</div>
     )
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css';
+// import './App.css';
 import { useEffect, useState } from 'react'
 import PlacesAutocomplete, {
     geocodeByAddress,
@@ -7,39 +7,33 @@ import PlacesAutocomplete, {
     getLatLng,
 } from 'react-places-autocomplete';
 import { connect } from 'react-redux'
+import { useHistory } from 'react-router-dom';
 
 
+function NewApp(props) {
 
-function newApp(props) {
 
-
-    const [address, setAddress] = useState("", )
+    const [address, setAddress] = useState("")
 
     let formattedAddress = address.split(" ").join("%20")
 
+    const history = useHistory()
 
     const getRepInfoByAddress = () => {
         fetch(`https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyDatTrCAc_AsUpv-RrJ1uT-a9kvyF6SJS8&address=${formattedAddress}`)
             .then(response => response.json())
             .then(result => {
                 console.log(result)
-                props.onFetchReps(result) /* set action for search to button, onChange and onClick */
-            })
+                // props.onFetchReps({official: result.officials[0]}) /* set action for search to button, onChange and onClick */
+                props.onFetchReps(result)
+                  
+            }).then(history.push('/results'))
     }
-
-
-
+    
 
     useEffect(() => {
-        // getRepInfoByAddress()
+        // getRepInfoByAddress
     }, [])
-
-
-    const dataItems = props.reps.officials.map(rep => {
-        return (
-            <div key={rep.normalizedInput}>{rep.officials}</div>
-        )
-    })
 
 
     return (
@@ -76,8 +70,6 @@ function newApp(props) {
                     </div>
                 )}
             </PlacesAutocomplete>
-
-            <ul>{dataItems}</ul>
         </div>
     );
 }
@@ -97,4 +89,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(newApp);
+export default connect(mapStateToProps, mapDispatchToProps)(NewApp);
