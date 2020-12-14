@@ -73,7 +73,7 @@ function Search(props) {
 
                                 {suggestions.map((suggestion) => {
                                     const style = {
-                                        backgroundColor: suggestion.active ? "#65C6F7" : "#fff",
+                                        backgroundColor: suggestion.active ? "#0e448b" : "#fff",
                                         color: suggestion.active ? "#fff" : "#000000"
                                     }
                                     return (

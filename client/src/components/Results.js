@@ -43,8 +43,8 @@ function Results(props) {
                             }
                         }
                         className='contactModal'>
-                        <p key={official.name}><b>Contact {official.name}</b></p>
-                        <a key={official.name} href='tel:{official.phones[0]}' className='phoneNumber'>{official.phones[0]}</a>
+                        <p><b>Contact {official.name}</b></p>
+                        <a href='tel:{official.phones[0]}' className='phoneNumber'>{official.phones[0]}</a>
                         <div>
                             <button onClick={() => setModalIsOpen(false)}>Close</button>
                         </div>
@@ -54,7 +54,7 @@ function Results(props) {
             )
 
 
-        })
+        }).reverse()
 
         return (
             <div>
@@ -62,7 +62,7 @@ function Results(props) {
                 <ul className='officialName'>{officialNames}</ul>
             </div>
         )
-    })
+    }).reverse()
 
     return (
         <div className='container'>
