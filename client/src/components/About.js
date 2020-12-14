@@ -1,6 +1,7 @@
 
 
 import logo from '../images/america.jpg'
+import Footer2 from './Footer2'
 import './styles/about.css'
 
 
@@ -8,9 +9,10 @@ function About() {
 
     return (
 
-        <div className='container'>
-            <img src={logo} />
+        <div className='aboutContainer'>
+            <img src={logo} className='aboutLogo' alt='American flag'/>
             <div>This is the about page</div>
+            <Footer2 />
         </div>
     )
 }

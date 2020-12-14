@@ -13,6 +13,47 @@ Modal.setAppElement('#root')
 function Results(props) {
 
     const [modalIsOpen, setModalIsOpen] = useState(false)
+    const [official, setOfficial] = useState(null)
+
+    const createModel = () => {
+
+        return (
+
+          <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => setModalIsOpen(false)}
+        shouldCloseOnOverlayClick={true}
+
+        style={
+            {
+                overlay: {
+                    backgroundColor: null
+                },
+                content: {
+                    backgroundColor: "#e0e7f0"
+                }
+            }
+        }
+        className='contactModal'>
+
+        
+        <p className='contactLi'><b>Contact {official != null ? official.name: ""}</b></p>
+    <a href='tel:{official.phones[0]}' className='phoneNumber'>{official != null ? official.phones[0] : ""}</a>
+        <div>
+            <button onClick={() => setModalIsOpen(false)} className='modalButton'>Close</button>
+        </div>
+
+    </Modal>
+
+        )
+        
+    }
+    
+    const showOfficialInfo = (official) => {
+        setModalIsOpen(true)
+        setOfficial(official)
+        //setModalIsOpen(true)
+    }
 
     const officeNames = props.offices.map(office => {
 
@@ -20,55 +61,60 @@ function Results(props) {
             let official = props.officials[index]
 
 
-
             return (
                 
                 <div className='nameAndContact'>
                     <li>{official.name} ({official.party})</li>
 
-                    <button onClick={() => setModalIsOpen(true)}>Contact</button>
+                    <button onClick={() => showOfficialInfo(official)}>Contact</button>
 
-                    <Modal
+                    {/* <Modal
                         isOpen={modalIsOpen}
                         onRequestClose={() => setModalIsOpen(false)}
                         shouldCloseOnOverlayClick={true}
+
                         style={
                             {
                                 overlay: {
                                     backgroundColor: null
                                 },
                                 content: {
-                                    backgroundColor: "white"
+                                    backgroundColor: "#e0e7f0"
                                 }
                             }
                         }
                         className='contactModal'>
-                        <p><b>Contact {official.name}</b></p>
+
+                        
+                        <p className='contactLi'><b>Contact {official.name}</b></p>
                         <a href='tel:{official.phones[0]}' className='phoneNumber'>{official.phones[0]}</a>
                         <div>
-                            <button onClick={() => setModalIsOpen(false)}>Close</button>
+                            <button onClick={() => setModalIsOpen(false)} className='modalButton'>Close</button>
                         </div>
 
-                    </Modal>
+                    </Modal> */}
                 </div>
             )
 
 
-        }).reverse()
-
+        })
+        // .reverse()
         return (
             <div>
                 <h1 className='officeName'>{office.name}</h1>
                 <ul className='officialName'>{officialNames}</ul>
+              
             </div>
         )
-    }).reverse()
+    })
+        // .reverse()
 
     return (
         <div className='container'>
             <Search />
             {/* <div>{officialNames}</div><br></br> */}
             <div key={props.officials.normalizedInput} className='results'>{officeNames}</div>
+            {createModel()}
             <Note />
 
             <Footer />

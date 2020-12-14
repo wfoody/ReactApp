@@ -29,20 +29,25 @@
  
 
   .contactModal {
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     font-family: Oswald;
+    font-size: 30px;
     text-align: center;
     border: grey;
-    border-width: 2px;
+    border-width: 1px;
     border-radius: 15px;
     border-style: solid;
     outline: none;
     align-self: center;
-    /* box-shadow: 5px 5px #888888; */
+    box-shadow: 8px 8px #60708d;
+    /* box-shadow: 0 0 5px 5px rgba(235, 225, 225, 0.35); */
+
     justify-content: space-around;
     display: flex;
     flex-direction: column;
+    margin-left: 58px;
+    margin-top: 50%;
   }
 
   .phoneNumber {
@@ -58,6 +63,11 @@
       outline: none;
       background-color: rgb(229, 234, 240);
   }
+  .modalButton {
+      font-size: 30px;
+      width: 100px;
+      background-color: white;
+  }
 
   button:hover {
       cursor: pointer;
@@ -70,4 +80,5 @@
       justify-content: space-between;
       margin: 5px;
       /* margin-right: 20px; */
+      margin-bottom: 8px;
   }

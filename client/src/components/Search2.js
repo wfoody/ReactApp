@@ -97,6 +97,7 @@ function Search(props) {
                     )}
                 </PlacesAutocomplete>
             </div>
+            <Footer />
         </div>
     );
 }

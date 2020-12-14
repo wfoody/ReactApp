@@ -5,6 +5,7 @@
     width: 100%;
     /* background-color: rgb(182, 189, 211); */
     background-color: snow;
+    justify-content: center;
 }
 
 html, body {
@@ -29,28 +30,49 @@ height: 50px;
 border-radius: 10px;
 outline: none;
 border-color: grey;
+border-style: solid;
 box-shadow: 5px 5px #888888;
 /* box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 border-width: 1px;
 position: relative;
-margin-bottom: 30px;
+margin-bottom: 20px;
 font-family: 'Fugaz One', cursive;
 text-transform: uppercase;
 align-self: center;
 /* align-content: center; */
 text-align: center;
-/* color: black; */
+color: rgb(39, 39, 43);
 font-size: 13.5px;
+/* color: #e0e7f0; */
+}
+
+.inputText::placeholder {
+    color: rgb(65, 65, 73);
+
+}
+
+.inputAndButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchButton {
+    width: 100px;
+    font-size: 15px;
+    height: 40px;
+    margin-bottom: 10px;
 }
 
 @font-face {
     font-family: Oswald;
     src: url(Oswald-VariableFont_wght.ttf);
-  }
+}
 
 p {
     font-family: Oswald;
-  }
+}
 
 .dropdownItem {
     font-size: 15px;
@@ -65,6 +87,8 @@ p {
     position: relative;
     z-index: 1;
     /* color: #0e448b; */
+    color: rgb(39, 39, 43);
+
 }
 
 .dropdownItem:hover {
@@ -80,10 +104,12 @@ p {
     width: 100%;
     position: absolute;
     z-index: 1;
+    color: rgb(39, 39, 43);
+
 
 }
 
-img {
+.searchLogo {
     width: 300px;
     height: auto;
     border-radius: 5px;

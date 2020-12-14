@@ -1,11 +1,15 @@
 
 
-img {
-    width: 50px;
+.aboutLogo {
+    width: 200px;
     height: auto;
+    margin-top: 30px;
 }
 
-.container {
+.aboutContainer {
     justify-content: center;
     align-items: center;
+    text-align: center;
+    background-color: snow;
+    height: 100vh;
 }
