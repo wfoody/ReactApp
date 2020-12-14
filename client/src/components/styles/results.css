@@ -1,0 +1,72 @@
+.officeName {
+    font-size: medium;
+    text-transform: uppercase;
+    font-family: 'Fugaz One', cursive;
+    font-size: 18px;
+}
+
+.officialName {
+    font-family: Oswald;
+    font-size: 18px;
+}
+
+.container {
+    align-items: center;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(Oswald-VariableFont_wght.ttf);
+  }
+
+.results {
+    margin: 20px; 
+    margin-bottom: 60px; 
+    color: rgb(33, 36, 54);
+}
+ 
+
+  .contactModal {
+    height: 200px;
+    width: 200px;
+    font-family: Oswald;
+    text-align: center;
+    border: grey;
+    border-width: 2px;
+    border-radius: 15px;
+    border-style: solid;
+    outline: none;
+    align-self: center;
+    /* box-shadow: 5px 5px #888888; */
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .phoneNumber {
+      text-decoration: none;
+      color: rgb(33, 36, 54);
+    }
+
+  button {
+      font-family: Oswald;
+      box-shadow: 2px 2px #888888;
+      border-radius: 3px;
+      border: none;
+      outline: none;
+      background-color: rgb(229, 234, 240);
+  }
+
+  button:hover {
+      cursor: pointer;
+      background-color: rgb(189, 198, 207);
+
+  }
+
+  .nameAndContact {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px;
+      /* margin-right: 20px; */
+  }

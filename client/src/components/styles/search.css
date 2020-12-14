@@ -1,0 +1,84 @@
+.wholeComponent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* background-color: rgb(182, 189, 211); */
+}
+
+.searchTitle {
+    margin-top: 50px;
+    font-size: 50px;
+    font-family: 'Fugaz One', cursive;
+    color: rgb(37, 40, 61);
+    margin-bottom: 10px;
+    text-decoration: none;
+
+}
+
+.inputText {
+justify-content: center;
+width: 350px;
+height: 50px;
+border-radius: 10px;
+outline: none;
+border-color: grey;
+box-shadow: 5px 5px #888888;
+/* box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+border-width: 1px;
+position: relative;
+margin-bottom: 30px;
+font-family: 'Fugaz One', cursive;
+text-transform: uppercase;
+align-self: center;
+/* align-content: center; */
+text-align: center;
+/* color: black; */
+font-size: 13.5px;
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(Oswald-VariableFont_wght.ttf);
+  }
+
+p {
+    font-family: Oswald;
+  }
+
+.dropdownItem {
+    font-size: 15px;
+    border: slategray;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 3px;
+    font-family: Oswald;
+    width: 350px;
+    position: relative;
+    z-index: 1;
+}
+
+.dropdownItem:hover {
+    cursor: pointer;
+}
+
+.boxAndSuggestions {
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    align-self: center;
+    font-family: Oswald;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+
+}
+
+img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}

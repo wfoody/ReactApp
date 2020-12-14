@@ -8,9 +8,9 @@ import { createStore } from 'redux'
 import reducer from './store/reducer';
 import { Provider } from 'react-redux';
 import BaseLayout from './components/BaseLayout';
-import NewApp from './components/NewApp';
 import About from './components/About';
 import Results from './components/Results';
+import Search from './components/Search';
 
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
@@ -21,7 +21,7 @@ ReactDOM.render(
       <Provider store={store}>
         <BaseLayout>
           <Switch>
-            <Route component={NewApp} path="/" exact/>
+            <Route component={Search} path="/" exact />
             <Route component={About} path="/about" />
             <Route component={Results} path="/results" />
 
