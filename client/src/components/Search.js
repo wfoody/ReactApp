@@ -7,7 +7,6 @@ import { useHistory } from 'react-router-dom';
 import logo from '../images/america.jpg'
 import { NavLink } from 'react-router-dom'
 import useOnclickOutside from "react-cool-onclickoutside";
-import Footer from './Footer';
 
 function Search(props) {
 

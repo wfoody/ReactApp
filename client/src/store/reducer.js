@@ -6,7 +6,7 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     
-    if(action.type == 'FETCH_REPS') {
+    if(action.type === 'FETCH_REPS') {
         return {
             ...state,
             reps: action.payload

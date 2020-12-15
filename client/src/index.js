@@ -10,7 +10,6 @@ import { Provider } from 'react-redux';
 import BaseLayout from './components/BaseLayout';
 import About from './components/About';
 import Results from './components/Results';
-import Search from './components/Search';
 import Search2 from './components/Search2';
 
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())

@@ -9,10 +9,15 @@
     font-size: 18px;
 }
 
-.container {
+.partyName {
+    color: rgb(107, 114, 134);
+}
+
+.resultsContainer {
     align-items: center;
     justify-content: center;
     background-color: snow;
+    /* text-align: center; */
 }
 
 @font-face {
@@ -63,6 +68,7 @@
       border: none;
       outline: none;
       background-color: rgb(229, 234, 240);
+      /* background-color: rgb(161, 175, 219); */
       text-transform: uppercase;
       margin-left: 10px;
   }
@@ -114,24 +120,35 @@
     }
 
     .results {
-        margin-left: 80px;
-        margin-right: 80px;
+        margin-left: 270px;
+        margin-right: 300px;
+        margin-top: 50px;
 
     }
 
     .contactButton {
         width: 100px;
-    font-size: 15px;
-    height: 40px;
-    text-transform: uppercase;
+        font-size: 15px;
+        height: 40px;
+        text-transform: uppercase;
+        margin-top: -9px;
   }
 
-  .officeName {
-    
-    font-size: 20px;
-}
+    .officeName {
+        font-size: 20px;
+    }
 
-.officialName {
-    font-size: 20px;
-}
+    .officialName {
+        font-size: 20px;
+    }
+
+    .nameAndContact {
+        height: 50px;
+    }
+
+    .noteAndFooter {
+        text-align: center;
+    }
+
+    
 }

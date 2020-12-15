@@ -70,10 +70,9 @@ function Results(props) {
             return (
 
                 <div className='nameAndContact'>
-                    <li>{official.name} ({official.party})</li>
+                    <li>{official.name} <span className='partyName'>({official.party})</span></li>
 
                     <button onClick={() => showOfficialInfo(official)} className='contactButton'>Contact</button>
-
                     {/* <Modal
                         isOpen={modalIsOpen}
                         onRequestClose={() => setModalIsOpen(false)}
@@ -109,20 +108,23 @@ function Results(props) {
             <div>
                 <h1 className='officeName'>{office.name}</h1>
                 <ul className='officialName'>{officialNames}</ul>
+                <hr></hr>
 
             </div>
         )
     }).reverse()
 
     return (
-        <div className='container'>
+        <div className='resultsContainer'>
             <Search />
             {/* <div>{officialNames}</div><br></br> */}
             <div key={props.officials.normalizedInput} className='results'>{officeNames}</div>
             {createModel()}
-            <Note />
+            <div className='noteAndFooter'>
+                <Note />
 
-            <Footer />
+                <Footer />
+            </div>
         </div>
     )
 }
