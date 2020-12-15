@@ -14,12 +14,13 @@ p {
     text-decoration: none;
 }
 
-p:hover {
-    cursor: pointer;
-}
 
 .about {
     text-decoration: none;
     color: rgb(37, 40, 61);
+}
+
+.about:hover {
+    cursor: pointer;
 
 }

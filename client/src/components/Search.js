@@ -44,13 +44,6 @@ function Search(props) {
     }
 
 
-    // onChange = (event) => {this.setAddress({[event.target.name]: event.target.value });
-    // };
-
-    // useEffect(() => {
-    //     // getRepInfoByAddress
-    // }, [])
-
     return (
 
         <div className='wholeComponent'>

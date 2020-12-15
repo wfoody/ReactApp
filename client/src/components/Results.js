@@ -17,38 +17,44 @@ function Results(props) {
 
     const createModel = () => {
 
-        return (
+        if (official != null) {
 
-          <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={() => setModalIsOpen(false)}
-        shouldCloseOnOverlayClick={true}
+            return (
 
-        style={
-            {
-                overlay: {
-                    backgroundColor: null
-                },
-                content: {
-                    backgroundColor: "#e0e7f0"
-                }
-            }
+                <Modal
+                    isOpen={modalIsOpen}
+                    onRequestClose={() => setModalIsOpen(false)}
+                    shouldCloseOnOverlayClick={true}
+
+                    style={
+                        {
+                            overlay: {
+                                backgroundColor: null
+                            },
+                            content: {
+                                backgroundColor: "#e0e7f0"
+                            }
+                        }
+                    }
+                    className='contactModal'>
+
+
+                    <p className='contactTitle'><b>Contact {official.name}</b></p>
+                    <a href='tel:{official.phones[0]}' className='phoneNumber'>{official.phones[0]}</a>
+                    <a href='{official.emails[0]}' className='contactEmail'>{official.emails ? official.emails[0] : null}</a>
+                    <a href='{official.urls[0]}' className='contactUrl'>{official.urls ? official.urls[0] : null}</a>
+
+                    <div>
+                        <button onClick={() => setModalIsOpen(false)} className='modalButton'>Close</button>
+                    </div>
+
+                </Modal>
+
+            )
         }
-        className='contactModal'>
 
-        
-        <p className='contactLi'><b>Contact {official != null ? official.name: ""}</b></p>
-    <a href='tel:{official.phones[0]}' className='phoneNumber'>{official != null ? official.phones[0] : ""}</a>
-        <div>
-            <button onClick={() => setModalIsOpen(false)} className='modalButton'>Close</button>
-        </div>
-
-    </Modal>
-
-        )
-        
     }
-    
+
     const showOfficialInfo = (official) => {
         setModalIsOpen(true)
         setOfficial(official)
@@ -62,11 +68,11 @@ function Results(props) {
 
 
             return (
-                
+
                 <div className='nameAndContact'>
                     <li>{official.name} ({official.party})</li>
 
-                    <button onClick={() => showOfficialInfo(official)}>Contact</button>
+                    <button onClick={() => showOfficialInfo(official)} className='contactButton'>Contact</button>
 
                     {/* <Modal
                         isOpen={modalIsOpen}
@@ -97,17 +103,16 @@ function Results(props) {
             )
 
 
-        })
-        // .reverse()
+        }).reverse()
+
         return (
             <div>
                 <h1 className='officeName'>{office.name}</h1>
                 <ul className='officialName'>{officialNames}</ul>
-              
+
             </div>
         )
-    })
-        // .reverse()
+    }).reverse()
 
     return (
         <div className='container'>
