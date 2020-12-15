@@ -8,6 +8,10 @@ import logo from '../images/america.jpg'
 import { NavLink } from 'react-router-dom'
 import useOnclickOutside from "react-cool-onclickoutside";
 import Footer from './Footer';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+toast.configure();
 
 function Search(props) {
 
@@ -34,7 +38,9 @@ function Search(props) {
         fetch(`https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyDatTrCAc_AsUpv-RrJ1uT-a9kvyF6SJS8&address=${formattedAddress}`)
             .then(response => { 
                 if (!response.ok) {
-                    throw alert('Please enter valid US address');
+                    // throw alert('Please enter valid US address');
+                    throw toast.error('Please enter valid US address!');
+
                   }
                   return response.json()
             })
