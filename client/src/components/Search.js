@@ -30,7 +30,12 @@ function Search(props) {
     const getRepInfoByAddress = () => {
 
         fetch(`https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyDatTrCAc_AsUpv-RrJ1uT-a9kvyF6SJS8&address=${formattedAddress}`)
-            .then(response => response.json())
+            .then(response => { 
+                if (!response.ok) {
+                    throw alert('Please enter valid US address!');
+                  }
+                  return response.json()
+            })
             .then(result => {
                 console.log(result)
                 // props.onFetchReps({official: result.officials[0]}) /* set action for search to button, onChange and onClick */

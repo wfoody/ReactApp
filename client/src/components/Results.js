@@ -70,34 +70,11 @@ function Results(props) {
             return (
 
                 <div className='nameAndContact'>
+
                     <li>{official.name} <span className='partyName'>({official.party})</span></li>
 
                     <button onClick={() => showOfficialInfo(official)} className='contactButton'>Contact</button>
-                    {/* <Modal
-                        isOpen={modalIsOpen}
-                        onRequestClose={() => setModalIsOpen(false)}
-                        shouldCloseOnOverlayClick={true}
 
-                        style={
-                            {
-                                overlay: {
-                                    backgroundColor: null
-                                },
-                                content: {
-                                    backgroundColor: "#e0e7f0"
-                                }
-                            }
-                        }
-                        className='contactModal'>
-
-                        
-                        <p className='contactLi'><b>Contact {official.name}</b></p>
-                        <a href='tel:{official.phones[0]}' className='phoneNumber'>{official.phones[0]}</a>
-                        <div>
-                            <button onClick={() => setModalIsOpen(false)} className='modalButton'>Close</button>
-                        </div>
-
-                    </Modal> */}
                 </div>
             )
 
