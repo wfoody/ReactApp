@@ -108,7 +108,9 @@ function Search(props) {
                     )}
                 </PlacesAutocomplete>
             </div>
+            <div className='footer'>
             <Footer />
+            </div>
         </div>
     );
 }

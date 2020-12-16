@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.d167baf0.chunk.css",
+    "main.css": "/static/css/main.05170466.chunk.css",
     "main.js": "/static/js/main.e0b47ae2.chunk.js",
     "main.js.map": "/static/js/main.e0b47ae2.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.b879d66f.js",
@@ -12,7 +12,7 @@
     "static/js/3.a9651835.chunk.js.map": "/static/js/3.a9651835.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.ccc6f86f.chunk.css.map": "/static/css/2.ccc6f86f.chunk.css.map",
-    "static/css/main.d167baf0.chunk.css.map": "/static/css/main.d167baf0.chunk.css.map",
+    "static/css/main.05170466.chunk.css.map": "/static/css/main.05170466.chunk.css.map",
     "static/js/2.2e93300e.chunk.js.LICENSE.txt": "/static/js/2.2e93300e.chunk.js.LICENSE.txt",
     "static/media/results.css": "/static/media/Oswald-VariableFont_wght.88fc6c5b.ttf",
     "static/media/america.cf8db325.jpg": "/static/media/america.cf8db325.jpg"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.b879d66f.js",
     "static/css/2.ccc6f86f.chunk.css",
     "static/js/2.2e93300e.chunk.js",
-    "static/css/main.d167baf0.chunk.css",
+    "static/css/main.05170466.chunk.css",
     "static/js/main.e0b47ae2.chunk.js"
   ]
 }

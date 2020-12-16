@@ -4,12 +4,25 @@
     width: 200px;
     height: auto;
     margin-top: 30px;
+    margin-bottom: 50px;
 }
 
-.aboutContainer {
-    justify-content: center;
-    align-items: center;
+.aboutLogoDiv {
+    align-items: center;    
+    width: 100%;
     text-align: center;
+    }
+
+.aboutContainer {
+    /* justify-content: center;
+    align-items: center;
+    text-align: center; */
     background-color: snow;
     height: 100vh;
+    font-family: Oswald;
 }
+
+@font-face {
+    font-family: Oswald;
+    src: url(Oswald-VariableFont_wght.ttf);
+  }
