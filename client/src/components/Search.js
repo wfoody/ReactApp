@@ -36,10 +36,10 @@ function Search(props) {
         fetch(`https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyDatTrCAc_AsUpv-RrJ1uT-a9kvyF6SJS8&address=${formattedAddress}`)
             .then(response => { 
                 if (!response.ok) {
-                    // throw alert('Please enter valid US address!');
-                    throw toast.error('Please enter valid US address!');
-                  }
-                  return response.json()
+                    throw toast('Please enter a valid US address!', {
+                        className: "customToast"
+                    }
+                )} return response.json()    
             })
             .then(result => {
                 console.log(result)

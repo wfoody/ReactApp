@@ -39,7 +39,9 @@ function Search(props) {
             .then(response => { 
                 if (!response.ok) {
                     // throw alert('Please enter valid US address');
-                    throw toast.error('Please enter valid US address!', { fontFamily: "Times New Roman, Serif" });
+                    throw toast('Please enter a valid US address!', {
+                        className: "customToast"
+                    });
 
                   }
                   return response.json()
