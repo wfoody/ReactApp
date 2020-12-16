@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ef0170d5.chunk.css",
+    "main.js": "/static/js/main.ad61384c.chunk.js",
+    "main.js.map": "/static/js/main.ad61384c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b879d66f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b879d66f.js.map",
+    "static/css/2.ccc6f86f.chunk.css": "/static/css/2.ccc6f86f.chunk.css",
+    "static/js/2.2e93300e.chunk.js": "/static/js/2.2e93300e.chunk.js",
+    "static/js/2.2e93300e.chunk.js.map": "/static/js/2.2e93300e.chunk.js.map",
+    "static/js/3.a9651835.chunk.js": "/static/js/3.a9651835.chunk.js",
+    "static/js/3.a9651835.chunk.js.map": "/static/js/3.a9651835.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.ccc6f86f.chunk.css.map": "/static/css/2.ccc6f86f.chunk.css.map",
+    "static/css/main.ef0170d5.chunk.css.map": "/static/css/main.ef0170d5.chunk.css.map",
+    "static/js/2.2e93300e.chunk.js.LICENSE.txt": "/static/js/2.2e93300e.chunk.js.LICENSE.txt",
+    "static/media/results.css": "/static/media/Oswald-VariableFont_wght.88fc6c5b.ttf",
+    "static/media/america.cf8db325.jpg": "/static/media/america.cf8db325.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b879d66f.js",
+    "static/css/2.ccc6f86f.chunk.css",
+    "static/js/2.2e93300e.chunk.js",
+    "static/css/main.ef0170d5.chunk.css",
+    "static/js/main.ad61384c.chunk.js"
+  ]
+}

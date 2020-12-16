@@ -16,14 +16,15 @@ html, body {
 
 
 .searchTitle {
-    margin-top: 25px;
+    margin-top: 15px;
     font-size: 14.8vw;
     font-family: 'Fugaz One', cursive;
     color: rgb(37, 40, 61);
-    margin-bottom: 10px;
+    margin-bottom: 1px;
     text-decoration: none;
     margin-left: auto;
     margin-right: auto;
+    letter-spacing: -5px;
 }
 
 .inputText {
@@ -35,10 +36,11 @@ outline: none;
 border-color: grey;
 border-style: solid;
 box-shadow: 5px 5px #888888;
+-webkit-box-shadow: 5px 5px #888888;
 /* box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 border-width: 1px;
 position: relative;
-margin-bottom: 20px;
+margin-bottom: 27px;
 font-family: 'Fugaz One', cursive;
 text-transform: uppercase;
 align-self: center;
@@ -56,6 +58,7 @@ margin-right: 3px;
 
 .inputText::placeholder {
     color: rgb(65, 65, 73);
+    font-size: 13.4px;
 
 }
 
@@ -128,7 +131,7 @@ p {
     width: 300px;
     height: auto;
     border-radius: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 769px) {
@@ -158,5 +161,11 @@ p {
 
     .searchTitle {
         font-size: 95px;
+        letter-spacing: normal;
+
+    }
+
+    .searchLogo {
+        margin-bottom: 40px;
     }
 }

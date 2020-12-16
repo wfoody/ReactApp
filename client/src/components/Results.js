@@ -40,9 +40,9 @@ function Results(props) {
 
 
                     <p className='contactTitle'><b>Contact {official.name}</b></p>
-                    <a href='tel:{official.phones[0]}' className='phoneNumber'>{official.phones[0]}</a>
-                    <a href='{official.emails[0]}' className='contactEmail'>{official.emails ? official.emails[0] : null}</a>
-                    <a href='{official.urls[0]}' className='contactUrl'>{official.urls ? official.urls[0] : null}</a>
+                    <a href='#' className='phoneNumber'>{official.phones[0]}</a>
+                    <a href='#' className='contactEmail'>{official.emails ? official.emails[0] : null}</a>
+                    <a href={official.urls ? official.urls[0] : null} target="_blank" rel="noopener noreferrer" className='contactUrl'>{official.urls ? official.urls[0] : null}</a>
 
                     <div>
                         <button onClick={() => setModalIsOpen(false)} className='modalButton'>Close</button>

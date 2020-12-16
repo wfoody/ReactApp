@@ -33,7 +33,7 @@
  
 
   .contactModal {
-    height: 350px;
+    height: 400px;
     width: 300px;
     font-family: Oswald;
     font-size: 30px;
@@ -80,10 +80,10 @@
 
   .modalButton {
       font-size: 25px;
-      width: 100px;
+      width: 120px;
       background-color: white;
       box-shadow: 2px 2px #888888;
-      border-radius: 7px;
+      border-radius: 5px;
       border: none;
       outline: none;
       text-transform: uppercase;
@@ -107,10 +107,14 @@
 
   .contactEmail {
     font-size: 25px;
+    margin-top: 15px;
+
   }
 
   .contactUrl {
     font-size: 23px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 
 }
 
