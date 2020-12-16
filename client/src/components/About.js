@@ -1,7 +1,7 @@
 
 
 import logo from '../images/america.jpg'
-import Footer2 from './Footer2'
+// import Footer2 from './Footer2'
 import './styles/about.css'
 import { NavLink } from 'react-router-dom'
 
@@ -20,8 +20,9 @@ function About() {
             <p className='aboutContainer'>Talking and engaging with your representatives is one of the best ways to effect change in your local community, so reach out to them today with your concerns and <b>let your voice be heard!</b></p>
             </div>
             <div className='footerContainerAbout'>
-                <Footer2 />
-            </div>
+            <p>© 2020 / / REPRESENT</p>
+            <p><NavLink to='/' className='about'>HOME</NavLink></p>
+        </div>
         </div>
     )
 }

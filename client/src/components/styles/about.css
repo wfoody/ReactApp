@@ -38,7 +38,8 @@
     justify-content: space-around;
     font-size: 22px;
     bottom: 0;
-    position: absolute;
+    position: fixed;
+    /* margin-top: 20px; */
 
 }
 
