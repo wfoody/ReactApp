@@ -40,8 +40,8 @@ function Results(props) {
 
 
                     <p className='contactTitle'><b>Contact {official.name}</b></p>
-                    <a href='#' className='phoneNumber'>{official.phones[0]}</a>
-                    <a href='#' className='contactEmail'>{official.emails ? official.emails[0] : null}</a>
+                    <a href={official.phones ? 'tel:+' + official.phones[0] : null} className='phoneNumber'>{official.phones[0]}</a>
+                    <a href={official.emails ? 'mailto: ' + official.emails[0] : null} target="_blank" rel="noopener noreferrer" className='contactEmail'>{official.emails ? official.emails[0] : null}</a>
                     <a href={official.urls ? official.urls[0] : null} target="_blank" rel="noopener noreferrer" className='contactUrl'>{official.urls ? official.urls[0] : null}</a>
 
                     <div>

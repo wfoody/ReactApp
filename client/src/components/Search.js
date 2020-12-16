@@ -38,13 +38,11 @@ function Search(props) {
                 if (!response.ok) {
                     // throw alert('Please enter valid US address!');
                     throw toast.error('Please enter valid US address!');
-
                   }
                   return response.json()
             })
             .then(result => {
                 console.log(result)
-                // props.onFetchReps({official: result.officials[0]}) /* set action for search to button, onChange and onClick */
                 props.onFetchReps(result)
             }).then(() => toResults());
     }
