@@ -54,7 +54,7 @@ function Search(props) {
 
     return (
 
-        <div className='wholeComponent'>
+        <div className='wholeComponentResults'>
             <h1 className='searchTitle'><NavLink to='/' className='searchTitle'>REPRESENT</NavLink></h1>
             <img src={logo} className='searchLogo' alt='American flag'/>
 
@@ -78,7 +78,7 @@ function Search(props) {
                                 {openMenu && <div ref={ref}></div>}
                             </div>
                             <div>
-                                {loading ? <div>...loading</div> : null}
+                                {loading ? <div className='loading'>...loading</div> : null}
 
                                 {suggestions.map((suggestion) => {
                                     const style = {

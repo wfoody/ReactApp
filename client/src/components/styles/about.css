@@ -26,6 +26,16 @@
     font-size: 20px;
 }
 
+.aboutContainer2 {
+   
+    background-color: snow;
+    font-family: Oswald;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 20px;
+    margin-bottom: 80px;
+}
+
 .mainContainer {
     flex: 1 1 auto;
 }

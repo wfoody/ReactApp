@@ -90,7 +90,7 @@ function Search(props) {
                                 {openMenu && <div ref={ref}></div>}
                             </div>
                             <div>
-                                {loading ? <div>...loading</div> : null}
+                                {loading ? <div className='loading'>...loading</div> : null}
 
                                 {suggestions.map((suggestion) => {
                                     const style = {
