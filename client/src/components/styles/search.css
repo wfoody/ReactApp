@@ -6,6 +6,7 @@
     /* background-color: rgb(182, 189, 211); */
     background-color: snow;
     justify-content: center;
+    min-height: 100vh;
 }
 
 html, body {
@@ -140,11 +141,16 @@ p {
 }
 
 .footer {
-  position: fixed;
-  -webkit-position: fixed;
+  /* position: fixed;
+  -webkit-position: fixed; */
   bottom: 0;
+  left: 0;
   justify-content: space-around;
   width: 100%;
+  flex: 0 0 50px;/*or just height:50px;*/
+  margin-top: auto;
+  /* margin-bottom: 10px; */
+
 
 }
 
