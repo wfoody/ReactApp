@@ -38,6 +38,10 @@ html, body {
     letter-spacing: -5px;
 }
 
+.searchTitle:hover {
+    color: rgb(200, 212, 218)
+}
+
 .inputText {
     justify-content: center;
     width: 340px;

@@ -119,8 +119,18 @@
 
 }
 
+@media only screen and (min-width: 769px) {
 
-  @media only screen and (min-width: 769px) {
+    .results {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+
+}
+
+
+  @media only screen and (min-width: 1025px) {
     
     .contactModal {
       margin-top: 170px;

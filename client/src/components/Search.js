@@ -51,6 +51,12 @@ function Search(props) {
         history.push('/results')
     }
 
+    function handleKeyPress(e) {
+        if (e.keyCode === 13) {
+            getRepInfoByAddress();
+        }
+      }
+
 
     return (
 
@@ -70,7 +76,7 @@ function Search(props) {
                     {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                         <div>
                             <div className='inputAndButton'>
-                                <input type='text' className='inputText' {...getInputProps({ placeholder: "ENTER ADDRESS TO FIND YOUR REPRESENTATIVES" })} required />
+                                <input type='text' className='inputText' {...getInputProps({ placeholder: "ENTER ADDRESS TO FIND YOUR REPRESENTATIVES" })} required onKeyUp={handleKeyPress}/>
                                 <button onClick={getRepInfoByAddress} className='searchButton'>SEARCH</button>
                             </div>
                             <div>

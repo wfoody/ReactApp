@@ -19,7 +19,6 @@
 
 .aboutContainer {
    
-    background-color: snow;
     font-family: Oswald;
     margin-left: 30px;
     margin-right: 30px;
@@ -28,7 +27,6 @@
 
 .aboutContainer2 {
    
-    background-color: snow;
     font-family: Oswald;
     margin-left: 30px;
     margin-right: 30px;
@@ -36,9 +34,9 @@
     margin-bottom: 80px;
 }
 
-.mainContainer {
+/* .mainContainer {
     flex: 1 1 auto;
-}
+} */
 
 
 .aboutContainer a {
@@ -60,8 +58,8 @@
     /* left: 0; */
     /* position: fixed; */
     flex: 0 0 50px;/*or just height:50px;*/
-  margin-top: auto;
-  margin-bottom: 10px;
+    margin-top: auto;
+    margin-bottom: 10px;
     /* margin-top: 20px; */
 }
 
@@ -80,6 +78,14 @@
     }
 
     .aboutContainer {
+   
+        margin-left: 200px;
+        margin-right: 200px;
+        margin-bottom: 60px;
+        font-size: 25px;
+    }
+
+    .aboutContainer2 {
    
         margin-left: 200px;
         margin-right: 200px;

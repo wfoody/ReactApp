@@ -1,7 +1,6 @@
 
 
 import logo from '../images/america.jpg'
-// import Footer2 from './Footer2'
 import './styles/about.css'
 import { NavLink } from 'react-router-dom'
 
