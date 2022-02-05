@@ -18,14 +18,11 @@ function Results(props) {
     const createModel = () => {
 
         if (official != null) {
-
             return (
-
                 <Modal
                     isOpen={modalIsOpen}
                     onRequestClose={() => setModalIsOpen(false)}
                     shouldCloseOnOverlayClick={true}
-
                     style={
                         {
                             overlay: {
@@ -37,8 +34,6 @@ function Results(props) {
                         }
                     }
                     className='contactModal'>
-
-
                     <p className='contactTitle'><b>Contact {official.name}</b></p>
                     <a href={official.phones ? 'tel:' + official.phones[0] : null} className='phoneNumber'>{official.phones[0]}</a>
                     <a href={official.emails ? 'mailto: ' + official.emails[0] : null} target="_blank" rel="noopener noreferrer" className='contactEmail'>{official.emails ? official.emails[0] : null}</a>
@@ -47,7 +42,6 @@ function Results(props) {
                     <div>
                         <button onClick={() => setModalIsOpen(false)} className='modalButton'>Close</button>
                     </div>
-
                 </Modal>
 
             )
@@ -66,19 +60,13 @@ function Results(props) {
         let officialNames = office.officialIndices.map(index => {
             let official = props.officials[index]
 
-
             return (
 
                 <div className='nameAndContact'>
-
                     <li>{official.name} <span className='partyName'>({official.party})</span></li>
-
                     <button onClick={() => showOfficialInfo(official)} className='contactButton'>Contact</button>
-
                 </div>
             )
-
-
         }).reverse()
 
         return (
@@ -86,7 +74,6 @@ function Results(props) {
                 <h1 className='officeName'>{office.name}</h1>
                 <ul className='officialName'>{officialNames}</ul>
                 <hr></hr>
-
             </div>
         )
     }).reverse()
@@ -99,7 +86,6 @@ function Results(props) {
             {createModel()}
             <div className='noteAndFooter'>
                 <Note />
-
                 <Footer />
             </div>
         </div>
@@ -112,6 +98,5 @@ const mapStateToProps = state => {
         offices: state.reps.offices
     })
 }
-
 
 export default connect(mapStateToProps)(Results)
