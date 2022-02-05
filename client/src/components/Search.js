@@ -15,9 +15,8 @@ toast.configure();
 function Search(props) {
 
     const [address, setAddress] = useState("")
-
     const [openMenu, setOpenMenu] = useState(false)
-
+    
     const ref = useOnclickOutside(() => {
         setOpenMenu(false);
     })
@@ -57,21 +56,16 @@ function Search(props) {
         }
       }
 
-
     return (
-
         <div className='wholeComponentResults'>
             <h1 className='searchTitle'><NavLink to='/' className='searchTitle'>REPRESENT</NavLink></h1>
             <img src={logo} className='searchLogo' alt='American flag'/>
-
             <div>
                 <PlacesAutocomplete
                     value={address}
                     onChange={setAddress}
                     onSelect={setAddress}
                     className='boxAndSuggestions'>
-
-
 
                     {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                         <div>
@@ -95,7 +89,6 @@ function Search(props) {
                                         <div
                                             {...getSuggestionItemProps(suggestion, { style })} className='dropdownItem' >
                                             {suggestion.description}
-
                                         </div>
                                     )
                                 })}
