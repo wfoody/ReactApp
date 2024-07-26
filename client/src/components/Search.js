@@ -7,6 +7,9 @@ import { useNavigate } from 'react-router-dom';
 import logo from '../images/america.jpg';
 import { NavLink } from 'react-router-dom';
 import useOnclickOutside from "react-cool-onclickoutside";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function Search(props) {
 
