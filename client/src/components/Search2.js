@@ -11,8 +11,6 @@ import Footer from './Footer';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-toast.configure();
-
 function Search(props) {
 
     const [address, setAddress] = useState("");
