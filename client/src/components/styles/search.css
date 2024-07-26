@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    /* background-color: rgb(182, 189, 211); */
     background-color: snow;
     justify-content: center;
     min-height: 100vh;
@@ -16,14 +15,14 @@
     width: 100%;
     background-color: snow;
     justify-content: center;
-    /* min-height: 100vh; */
 }
 
-html, body {
+html,
+body {
     width: auto;
     height: 100%;
     -webkit-text-size-adjust: none;
-  }
+}
 
 
 .searchTitle {
@@ -59,26 +58,22 @@ html, body {
     font-family: 'Fugaz One', cursive;
     text-transform: uppercase;
     align-self: center;
-    /* align-content: center; */
     text-align: center;
     color: rgb(39, 39, 43);
     font-size: 13.5px;
-    /* color: #e0e7f0; */
     padding-left: 8px;
     padding-right: 8px;
     margin-left: auto;
     margin-right: 3px;
-
 }
 
 .inputText:focus::placeholder {
     color: transparent;
-  }
+}
 
 .inputText::placeholder {
     color: rgb(65, 65, 73);
     font-size: 13.4px;
-
 }
 
 .inputAndButton {
@@ -87,7 +82,6 @@ html, body {
     justify-content: center;
     align-items: center;
 }
-
 
 .searchButton {
     width: 100px;
@@ -100,13 +94,11 @@ html, body {
     border: none;
     outline: none;
     background-color: rgb(229, 234, 240);
-    }
-    
+}
 
 .loading {
     font-family: Oswald;
 }
-
 
 @font-face {
     font-family: Oswald;
@@ -129,9 +121,7 @@ p {
     width: 350px;
     position: relative;
     z-index: 1;
-    /* color: #0e448b; */
     color: rgb(39, 39, 43);
-
 }
 
 .dropdownItem:hover {
@@ -148,8 +138,6 @@ p {
     position: absolute;
     z-index: 1;
     color: rgb(39, 39, 43);
-
-
 }
 
 .searchLogo {
@@ -160,17 +148,12 @@ p {
 }
 
 .footer {
-  /* position: fixed;
-  -webkit-position: fixed; */
-  bottom: 0;
-  left: 0;
-  justify-content: space-around;
-  width: 100%;
-  flex: 0 0 50px;/*or just height:50px;*/
-  margin-top: auto;
-  /* margin-bottom: 10px; */
-
-
+    bottom: 0;
+    left: 0;
+    justify-content: space-around;
+    width: 100%;
+    flex: 0 0 50px;
+    margin-top: auto;
 }
 
 .customToast {
@@ -186,8 +169,6 @@ p {
     .inputAndButton {
         display: flex;
         flex-direction: row;
-        /* margin-bottom: 28vh; */
-
     }
 
     .inputText {
@@ -211,7 +192,6 @@ p {
     .searchTitle {
         font-size: 95px;
         letter-spacing: normal;
-
     }
 
     .searchLogo {
@@ -219,6 +199,6 @@ p {
     }
 
     .customToast {
-    border-radius: 10px !important;
+        border-radius: 10px !important;
     }
 }

@@ -12,13 +12,12 @@
 }
 
 .aboutLogoDiv {
-    align-items: center;    
+    align-items: center;
     width: 100%;
     text-align: center;
-    }
+}
 
 .aboutContainer {
-   
     font-family: Oswald;
     margin-left: 30px;
     margin-right: 30px;
@@ -26,7 +25,6 @@
 }
 
 .aboutContainer2 {
-   
     font-family: Oswald;
     margin-left: 30px;
     margin-right: 30px;
@@ -34,14 +32,8 @@
     margin-bottom: 80px;
 }
 
-/* .mainContainer {
-    flex: 1 1 auto;
-} */
-
-
 .aboutContainer a {
     color: rgb(23, 41, 139);
-
 }
 
 .footerContainerAbout {
@@ -55,30 +47,25 @@
     justify-content: space-around;
     font-size: 22px;
     bottom: 0;
-    /* left: 0; */
-    /* position: fixed; */
-    flex: 0 0 50px;/*or just height:50px;*/
+    flex: 0 0 50px;
     margin-top: auto;
     margin-bottom: 10px;
-    /* margin-top: 20px; */
 }
 
 
 @font-face {
     font-family: Oswald;
     src: url(Oswald-VariableFont_wght.ttf);
-  }
+}
 
-  @media only screen and (min-width: 769px) {
+@media only screen and (min-width: 769px) {
 
     .aboutLogo {
         width: 300px;
         height: auto;
-        
     }
 
     .aboutContainer {
-   
         margin-left: 200px;
         margin-right: 200px;
         margin-bottom: 60px;
@@ -86,18 +73,13 @@
     }
 
     .aboutContainer2 {
-   
         margin-left: 200px;
         margin-right: 200px;
         margin-bottom: 60px;
         font-size: 25px;
     }
 
- 
-
     .aboutLogo {
-       
         margin-bottom: 50px;
     }
-
-  }
+}

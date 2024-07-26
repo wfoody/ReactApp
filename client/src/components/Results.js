@@ -1,21 +1,19 @@
-
-import { connect } from 'react-redux'
-import Search from './Search'
-import './styles/results.css'
-import Modal from 'react-modal'
-import { useState } from 'react'
-import Footer from './Footer'
-import Note from './Note'
+import { connect } from 'react-redux';
+import Search from './Search';
+import './styles/results.css';
+import Modal from 'react-modal';
+import { useState } from 'react';
+import Footer from './Footer';
+import Note from './Note';
 
 Modal.setAppElement('#root')
-
 
 function Results(props) {
 
     const [modalIsOpen, setModalIsOpen] = useState(false)
     const [official, setOfficial] = useState(null)
 
-    const createModel = () => {
+    const createModal = () => {
 
         if (official != null) {
             return (
@@ -34,6 +32,7 @@ function Results(props) {
                         }
                     }
                     className='contactModal'>
+
                     <p className='contactTitle'><b>Contact {official.name}</b></p>
                     <a href={official.phones ? 'tel:' + official.phones[0] : null} className='phoneNumber'>{official.phones[0]}</a>
                     <a href={official.emails ? 'mailto: ' + official.emails[0] : null} target="_blank" rel="noopener noreferrer" className='contactEmail'>{official.emails ? official.emails[0] : null}</a>
@@ -42,8 +41,8 @@ function Results(props) {
                     <div>
                         <button onClick={() => setModalIsOpen(false)} className='modalButton'>Close</button>
                     </div>
-                </Modal>
 
+                </Modal>
             )
         }
 
@@ -52,7 +51,6 @@ function Results(props) {
     const showOfficialInfo = (official) => {
         setModalIsOpen(true)
         setOfficial(official)
-        //setModalIsOpen(true)
     }
 
     const officeNames = props.offices.map(office => {
@@ -61,7 +59,6 @@ function Results(props) {
             let official = props.officials[index]
 
             return (
-
                 <div className='nameAndContact'>
                     <li>{official.name} <span className='partyName'>({official.party})</span></li>
                     <button onClick={() => showOfficialInfo(official)} className='contactButton'>Contact</button>
@@ -81,9 +78,8 @@ function Results(props) {
     return (
         <div className='resultsContainer'>
             <Search />
-            {/* <div>{officialNames}</div><br></br> */}
             <div key={props.officials.normalizedInput} className='results'>{officeNames}</div>
-            {createModel()}
+            {createModal()}
             <div className='noteAndFooter'>
                 <Note />
                 <Footer />
@@ -99,4 +95,4 @@ const mapStateToProps = state => {
     })
 }
 
-export default connect(mapStateToProps)(Results)
+export default connect(mapStateToProps)(Results);

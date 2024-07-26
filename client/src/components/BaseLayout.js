@@ -1,10 +1,9 @@
+import React from 'react';
 
-import React from 'react'
+function BaseLayout(props) {
 
-function BaseLayout (props) {
-    
     return (
-        <>         
+        <>
             {props.children}
         </>
     )

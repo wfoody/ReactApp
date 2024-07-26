@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { createStore } from 'redux'
@@ -24,7 +23,6 @@ ReactDOM.render(
             <Route component={Search2} path="/" exact />
             <Route component={About} path="/about" />
             <Route component={Results} path="/results" />
-
           </Switch>
         </BaseLayout>
       </Provider>

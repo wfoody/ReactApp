@@ -1,8 +1,6 @@
-
-
-import logo from '../images/america.jpg'
-import './styles/about.css'
-import { NavLink } from 'react-router-dom'
+import logo from '../images/america.jpg';
+import './styles/about.css';
+import { NavLink } from 'react-router-dom';
 
 
 function About() {
@@ -19,12 +17,11 @@ function About() {
                 <p className='aboutContainer2'>Talking and engaging with your representatives is one of the best ways to effect change in your local community, so reach out to them today with your concerns and <b>let your voice be heard!</b></p>
             </div>
             <div className='footerContainerAbout'>
-                <p>© 2020 / / REPRESENT</p>
+                <p>© 2024 / / REPRESENT</p>
                 <p><NavLink to='/' className='about'>HOME</NavLink></p>
             </div>
         </div>
     )
 }
 
-
-export default About
+export default About;

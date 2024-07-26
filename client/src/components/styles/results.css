@@ -17,22 +17,20 @@
     align-items: center;
     justify-content: center;
     background-color: snow;
-    /* text-align: center; */
 }
 
 @font-face {
     font-family: Oswald;
     src: url(Oswald-VariableFont_wght.ttf);
-  }
+}
 
 .results {
-    margin: 20px; 
-    margin-bottom: 60px; 
+    margin: 20px;
+    margin-bottom: 60px;
     color: rgb(33, 36, 54);
 }
- 
 
-  .contactModal {
+.contactModal {
     height: 400px;
     width: 300px;
     font-family: Oswald;
@@ -45,78 +43,69 @@
     outline: none;
     align-self: center;
     box-shadow: 8px 8px #60708d;
-    /* box-shadow: 0 0 5px 5px rgba(235, 225, 225, 0.35); */
     justify-content: space-around;
     display: flex;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-
     margin-top: 30%;
     padding: 15px;
     word-wrap: break-word;
+}
 
-  }
+.phoneNumber {
+    text-decoration: none;
+    color: rgb(33, 36, 54);
+}
 
-  .phoneNumber {
-      text-decoration: none;
-      color: rgb(33, 36, 54);
-    }
+.contactButton {
+    font-family: Oswald;
+    font-size: 15px;
+    box-shadow: 2px 2px #888888;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background-color: rgb(229, 234, 240);
+    text-transform: uppercase;
+    margin-left: 10px;
+    height: 35px;
+    margin-top: -4px;
+    margin-bottom: 10px;
+}
 
-  .contactButton {
-      font-family: Oswald;
-      font-size: 15px;
-      box-shadow: 2px 2px #888888;
-      border-radius: 3px;
-      border: none;
-      outline: none;
-      background-color: rgb(229, 234, 240);
-      /* background-color: rgb(161, 175, 219); */
-      text-transform: uppercase;
-      margin-left: 10px;
-      height: 35px;
-      margin-top: -4px;
-      margin-bottom: 10px;
-  }
+.modalButton {
+    font-size: 25px;
+    width: 120px;
+    background-color: white;
+    box-shadow: 2px 2px #888888;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-family: Oswald;
+}
 
-  .modalButton {
-      font-size: 25px;
-      width: 120px;
-      background-color: white;
-      box-shadow: 2px 2px #888888;
-      border-radius: 5px;
-      border: none;
-      outline: none;
-      text-transform: uppercase;
-      font-family: Oswald;
+button:hover {
+    cursor: pointer;
+    background-color: rgb(189, 198, 207);
+}
 
-  }
+.nameAndContact {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    margin-bottom: 8px;
+}
 
-  button:hover {
-      cursor: pointer;
-      background-color: rgb(189, 198, 207);
-
-  }
-
-  .nameAndContact {
-      display: flex;
-      justify-content: space-between;
-      margin: 5px;
-      /* margin-right: 20px; */
-      margin-bottom: 8px;
-  }
-
-  .contactEmail {
+.contactEmail {
     font-size: 25px;
     margin-top: 15px;
+}
 
-  }
-
-  .contactUrl {
+.contactUrl {
     font-size: 23px;
     margin-top: 15px;
     margin-bottom: 10px;
-
 }
 
 @media only screen and (min-width: 769px) {
@@ -125,26 +114,22 @@
         padding-left: 60px;
         padding-right: 60px;
     }
-
-
 }
 
 
-  @media only screen and (min-width: 1025px) {
-    
-    .contactModal {
-      margin-top: 170px;
-      margin-left: auto;
-      margin-right: auto;
+@media only screen and (min-width: 1025px) {
 
-      width: 500px;
+    .contactModal {
+        margin-top: 170px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 500px;
     }
 
     .results {
         margin-left: 270px;
         margin-right: 300px;
         margin-top: 50px;
-
     }
 
     .contactButton {
@@ -153,7 +138,7 @@
         height: 40px;
         text-transform: uppercase;
         margin-top: -5px;
-  }
+    }
 
     .officeName {
         font-size: 20px;
@@ -170,6 +155,4 @@
     .noteAndFooter {
         text-align: center;
     }
-
-    
 }
