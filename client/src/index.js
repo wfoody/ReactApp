@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { createStore } from 'redux'
 import reducer from './store/reducer';
 import { Provider } from 'react-redux';
@@ -19,11 +19,11 @@ ReactDOM.render(
     <BrowserRouter>
       <Provider store={store}>
         <BaseLayout>
-          <Switch>
-            <Route component={Search2} path="/" exact />
-            <Route component={About} path="/about" />
-            <Route component={Results} path="/results" />
-          </Switch>
+          <Routes>
+            <Route element={<Search2 />} path="/" exact />
+            <Route element={<About />} path="/about" />
+            <Route element={<Results />} path="/results" />
+          </Routes>
         </BaseLayout>
       </Provider>
     </BrowserRouter>

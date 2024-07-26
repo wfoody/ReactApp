@@ -3,7 +3,7 @@ import './styles/search.css';
 import { useState } from 'react';
 import PlacesAutocomplete from 'react-places-autocomplete';
 import { connect } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import logo from '../images/america.jpg';
 import { NavLink } from 'react-router-dom';
 import useOnclickOutside from "react-cool-onclickoutside";
@@ -26,7 +26,7 @@ function Search(props) {
         setOpenMenu(!openMenu);
     };
 
-    const history = useHistory();
+    const navigate = useNavigate();
 
     let formattedAddress = address.split(" ").join("%20");
 
@@ -50,7 +50,7 @@ function Search(props) {
     };
 
     const toResults = () => {
-        history.push('/results')
+        navigate('/results')
     };
 
     const onError = (status, clearSuggestions) => {
