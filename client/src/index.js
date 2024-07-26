@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -14,23 +14,23 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const store = configureStore({ reducer });
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-ReactDOM.render(
+root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
         <BaseLayout>
         <ToastContainer />
           <Routes>
-            <Route element={<Search2 />} path="/" />
-            <Route element={<About />} path="/about" />
-            <Route element={<Results />} path="/results" />
+            <Route path="/" element={<Search2 />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/results" element={<Results />} />
           </Routes>
         </BaseLayout>
       </Provider>
     </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

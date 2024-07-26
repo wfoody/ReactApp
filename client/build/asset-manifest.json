@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.37bd39f0.css",
-    "main.js": "/static/js/main.0292dbfc.js",
+    "main.js": "/static/js/main.eb275c64.js",
     "static/js/488.2fccf642.chunk.js": "/static/js/488.2fccf642.chunk.js",
     "static/media/Oswald-VariableFont_wght.ttf": "/static/media/Oswald-VariableFont_wght.88fc6c5b10cd8b2781cb.ttf",
     "static/media/america.jpg": "/static/media/america.cf8db32526da7efb7d87.jpg",
     "index.html": "/index.html",
     "main.37bd39f0.css.map": "/static/css/main.37bd39f0.css.map",
-    "main.0292dbfc.js.map": "/static/js/main.0292dbfc.js.map",
+    "main.eb275c64.js.map": "/static/js/main.eb275c64.js.map",
     "488.2fccf642.chunk.js.map": "/static/js/488.2fccf642.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.37bd39f0.css",
-    "static/js/main.0292dbfc.js"
+    "static/js/main.eb275c64.js"
   ]
 }
