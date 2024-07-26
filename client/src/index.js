@@ -10,20 +10,17 @@ import BaseLayout from './components/BaseLayout';
 import About from './components/About';
 import Results from './components/Results';
 import Search2 from './components/Search2';
-import { toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-// Configure toast here
-toast.configure();
-
 const store = configureStore({ reducer });
-
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
         <BaseLayout>
+        <ToastContainer />
           <Routes>
             <Route element={<Search2 />} path="/" />
             <Route element={<About />} path="/about" />
