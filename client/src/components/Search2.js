@@ -11,6 +11,8 @@ import Footer from './Footer';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+const apiKey = process.env.API_KEY;
+
 function Search(props) {
 
     const [address, setAddress] = useState("");
@@ -32,7 +34,7 @@ function Search(props) {
     const getRepInfoByAddress = () => {
 
 
-        fetch(`https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyDatTrCAc_AsUpv-RrJ1uT-a9kvyF6SJS8&address=${formattedAddress}`)
+        fetch(`https://www.googleapis.com/civicinfo/v2/representatives?key=${apiKey}&address=${formattedAddress}`)
             .then(response => {
                 if (!response.ok) {
                     throw toast('Please enter a valid US address!', {
